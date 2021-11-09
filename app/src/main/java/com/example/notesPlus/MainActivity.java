@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 
 import com.example.notesPlus.Adapter.ToDoAdapter;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements OnDialogCloseList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         mRecyclerview = findViewById(R.id.recyclerview);
         fab = findViewById(R.id.fab);
@@ -62,4 +65,6 @@ public class MainActivity extends AppCompatActivity implements OnDialogCloseList
         adapter.setTasks(mList);
         adapter.notifyDataSetChanged();
     }
+
+
 }
